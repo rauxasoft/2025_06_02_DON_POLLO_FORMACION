@@ -1,12 +1,12 @@
-package com.sinensia.donpollo.security;
+package com.sinensia.core.security;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.sinensia.donpollo.security.integration.model.UsuarioPL;
-import com.sinensia.donpollo.security.integration.repository.UsuarioPLRepository;
+import com.sinensia.core.security.integration.model.UsuarioPL;
+import com.sinensia.core.security.integration.repository.UsuarioPLRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

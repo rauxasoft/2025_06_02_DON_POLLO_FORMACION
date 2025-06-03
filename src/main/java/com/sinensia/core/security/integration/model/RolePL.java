@@ -1,4 +1,4 @@
-package com.sinensia.donpollo.security.integration.model;
+package com.sinensia.core.security.integration.model;
 
 import java.util.Objects;
 

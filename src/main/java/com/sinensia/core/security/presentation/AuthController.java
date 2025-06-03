@@ -1,4 +1,4 @@
-package com.sinensia.donpollo.security.presentation;
+package com.sinensia.core.security.presentation;
 
 import java.util.List;
 
@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sinensia.core.security.JwtUtils;
+import com.sinensia.core.security.UserDetailsImpl;
 import com.sinensia.donpollo.common.presentation.ErrorResponse;
-import com.sinensia.donpollo.security.JwtUtils;
-import com.sinensia.donpollo.security.UserDetailsImpl;
 
 @RestController
 @RequestMapping("donpollo/auth")

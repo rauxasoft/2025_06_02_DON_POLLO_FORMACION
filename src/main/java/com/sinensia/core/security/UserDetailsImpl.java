@@ -1,4 +1,4 @@
-package com.sinensia.donpollo.security;
+package com.sinensia.core.security;
 
 import java.util.Collection;
 import java.util.List;
@@ -9,7 +9,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.sinensia.donpollo.security.integration.model.UsuarioPL;
+import com.sinensia.core.security.integration.model.UsuarioPL;
 
 public class UserDetailsImpl implements UserDetails {
 	private static final long serialVersionUID = 176767577687L;

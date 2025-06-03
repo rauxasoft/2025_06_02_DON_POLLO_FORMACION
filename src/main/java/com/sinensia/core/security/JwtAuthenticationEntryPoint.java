@@ -1,4 +1,4 @@
-package com.sinensia.donpollo.security;
+package com.sinensia.core.security;
 
 import java.io.IOException;
 import java.io.PrintWriter;

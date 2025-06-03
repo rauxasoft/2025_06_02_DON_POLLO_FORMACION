@@ -1,4 +1,4 @@
-package com.sinensia.donpollo.security;
+package com.sinensia.core.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

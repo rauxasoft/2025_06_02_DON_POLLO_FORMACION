@@ -1,4 +1,4 @@
-package com.sinensia.donpollo.security.presentation;
+package com.sinensia.core.security.presentation;
 
 public class LoginRequest {
 
