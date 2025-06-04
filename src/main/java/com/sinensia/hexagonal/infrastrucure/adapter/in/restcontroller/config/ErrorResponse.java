@@ -1,4 +1,4 @@
-package com.sinensia.donpollo.common.presentation;
+package com.sinensia.hexagonal.infrastrucure.adapter.in.restcontroller.config;
 
 public class ErrorResponse {
 	

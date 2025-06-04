@@ -1,4 +1,4 @@
-package com.sinensia.donpollo.config;
+package com.sinensia.hexagonal.infrastrucure.adapter.out.jpa.config;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.sinensia.donpollo.business.config;
+package com.sinensia.hexagonal.domain.exceptions;
 
 public class BusinessException extends RuntimeException {
 	private static final long serialVersionUID = 1L;

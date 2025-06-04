@@ -1,4 +1,4 @@
-package com.sinensia.donpollo.presentation.config;
+package com.sinensia.hexagonal.infrastrucure.adapter.in.restcontroller.config;
 
 import org.springframework.beans.TypeMismatchException;
 import org.springframework.http.HttpHeaders;
@@ -12,8 +12,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.sinensia.donpollo.business.config.BusinessException;
-import com.sinensia.donpollo.common.presentation.ErrorResponse;
+import com.sinensia.hexagonal.domain.exceptions.BusinessException;
 
 @ControllerAdvice
 public class GestorCentralizadoExcepciones extends ResponseEntityExceptionHandler {

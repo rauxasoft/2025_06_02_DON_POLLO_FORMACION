@@ -7,8 +7,8 @@
     <!-- Business to Integration -->
     
     <mapping>
-    	<class-a>com.sinensia.donpollo.business.model.Familia</class-a>
-    	<class-b>com.sinensia.donpollo.integration.model.FamiliaPL</class-b>
+    	<class-a>com.sinensia.hexagonal.domain.model.Familia</class-a>
+    	<class-b>com.sinensia.hexagonal.infrastrucure.adapter.out.jpa.entities.FamiliaPL</class-b>
     </mapping>
     
 </mappings>
