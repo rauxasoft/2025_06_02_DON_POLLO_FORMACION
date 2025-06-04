@@ -13,6 +13,8 @@ import com.sinensia.hexagonal.domain.exceptions.BusinessException;
 import com.sinensia.hexagonal.domain.model.Familia;
 import com.sinensia.hexagonal.domain.model.Producto;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class ProductoUseCases implements ProductoInputPort {
 
@@ -33,6 +35,7 @@ public class ProductoUseCases implements ProductoInputPort {
 	}
 
 	@Override
+	@Transactional
 	public void actualizarProducto(Producto producto) {
 		
 		Long idProducto = producto.getId();
@@ -50,7 +53,6 @@ public class ProductoUseCases implements ProductoInputPort {
 		productoOutputPort.actualizarProducto(producto);
 	}
 
-	// eliminar?
 	@Override
 	public void descatalogarProducto(Long idProducto) {
 		productoOutputPort.descatalogarProducto(idProducto);
