@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sinensia.core.security.JwtUtils;
 import com.sinensia.core.security.UserDetailsImpl;
-import com.sinensia.donpollo.common.presentation.ErrorResponse;
+import com.sinensia.hexagonal.infrastrucure.adapter.in.restcontroller.config.ErrorResponse;
 
 @RestController
 @RequestMapping("donpollo/auth")

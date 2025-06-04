@@ -62,8 +62,12 @@ public class SecurityConfig {
 				    .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()						// Permitir acceso a métodos OPTIONS (lo utilizan los navegadores)
 				    .requestMatchers("/h2-console/**").permitAll()								// Para permitir el acceso a la consola H2
 				    .requestMatchers("/familias/**").permitAll()								// Para permitir el acceso "/familias"
-				//  .requestMatchers("/dependientes/**").permitAll()							// Para permitir el acceso "/dependientes"
 				    .requestMatchers("/productos/**").permitAll()								// Para permitir el acceso "/productos"
+				    .requestMatchers("/clientes/**").permitAll()								// Para permitir el acceso "/clientes"
+				    .requestMatchers("/pedidos/**").permitAll()									// Para permitir el acceso "/pedidos"
+				    .requestMatchers("/dependientes/**").permitAll()							// Para permitir el acceso "/dependientes"
+				    .requestMatchers("/establecimientos/**").permitAll()						// Para permitir el acceso "/establecimientos"
+				
 				//  .requestMatchers("/v3/api-docs/**", "/swagger-ui.html", "(swagger-ui/**").permitAll()
 				    
 				    .anyRequest().authenticated()												// El resto de end-points requieren estar autenticado

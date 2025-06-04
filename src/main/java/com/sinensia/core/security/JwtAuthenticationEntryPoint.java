@@ -11,7 +11,7 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sinensia.donpollo.common.presentation.ErrorResponse;
+import com.sinensia.hexagonal.infrastrucure.adapter.in.restcontroller.config.ErrorResponse;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
