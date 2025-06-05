@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -20,22 +21,31 @@ import com.sinensia.hexagonal.domain.model.Cliente;
 @ExtendWith(MockitoExtension.class)
 class ClienteUseCasesTest {
 
+	@Mock
+	private ClienteOutputPort clienteOutputPort;
+	
 	@InjectMocks
 	private ClienteUseCases clienteUseCases;
 	
-	@Mock
-	private ClienteOutputPort clienteOutputPort;
+	private Cliente cliente1;
+	private Cliente cliente2;
+	
+	@BeforeEach
+	void init() {
+		cliente1 = new Cliente();
+		cliente2 = new Cliente();
+		cliente1.setId(100L);
+		cliente2.setId(200L);
+	}
 	
 	@Test
 	void se_crea_cliente_ok() {
 		
-		Cliente cliente = new Cliente();
-		cliente.setId(null);
-		cliente.setNif("46883221L");
+		cliente1.setId(null);
 		
-		when(clienteOutputPort.crearCliente(cliente)).thenReturn(34L);
+		when(clienteOutputPort.crearCliente(cliente1)).thenReturn(34L);
 		
-		Long idCliente = clienteUseCases.crearCliente(cliente);
+		Long idCliente = clienteUseCases.crearCliente(cliente1);
 		
 		assertEquals(34L, idCliente);
 		
@@ -44,21 +54,15 @@ class ClienteUseCasesTest {
 	@Test
 	void lanza_exception_si_cliente_tiene_id() {
 		
-		Cliente cliente = new Cliente();
-		cliente.setId(100L);
-		
 		assertThrows(BusinessException.class, () -> {
-			clienteUseCases.crearCliente(cliente);
+			clienteUseCases.crearCliente(cliente1);
 		});
 	}
 	
 	@Test
-	void se_obtione_cliente_por_id() {
+	void se_obtiene_cliente_por_id() {
 		
-		Cliente cliente = new Cliente();
-		cliente.setId(100L);
-		
-		when(clienteOutputPort.obtenerClientePorId(100L)).thenReturn(Optional.of(cliente));
+		when(clienteOutputPort.obtenerClientePorId(100L)).thenReturn(Optional.of(cliente1));
 		
 		Optional<Cliente> optional = clienteUseCases.obtenerClientePorId(100L);
 		
@@ -68,12 +72,6 @@ class ClienteUseCasesTest {
 
 	@Test
 	void se_obtienen_todos_los_clientes() {
-		
-		Cliente cliente1 = new Cliente();
-		Cliente cliente2 = new Cliente();
-		
-		cliente1.setId(100L);
-		cliente2.setId(200L);
 		
 		List<Cliente> clientesEsperados = Arrays.asList(cliente1, cliente2);
 		
