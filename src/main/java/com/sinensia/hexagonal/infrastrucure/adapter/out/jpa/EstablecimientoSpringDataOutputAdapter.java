@@ -6,10 +6,10 @@ import java.util.Optional;
 import org.dozer.DozerBeanMapper;
 import org.springframework.stereotype.Repository;
 
-import com.sinensia.hexagonal.application.port.out.EstablecimientoOutputPort;
-import com.sinensia.hexagonal.domain.model.Establecimiento;
 import com.sinensia.hexagonal.infrastrucure.adapter.out.jpa.entities.EstablecimientoPL;
 import com.sinensia.hexagonal.infrastrucure.adapter.out.jpa.repositories.EstablecimientoPLRepository;
+import com.sinensia.hexagonal.modules.establecimiento.domain.model.Establecimiento;
+import com.sinensia.hexagonal.modules.establecimiento.port.out.EstablecimientoOutputPort;
 
 @Repository
 public class EstablecimientoSpringDataOutputAdapter implements EstablecimientoOutputPort  {

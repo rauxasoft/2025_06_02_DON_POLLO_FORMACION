@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.sinensia.hexagonal.application.port.in.ClienteInputPort;
-import com.sinensia.hexagonal.domain.model.Cliente;
 import com.sinensia.hexagonal.infrastrucure.adapter.in.restcontroller.config.ErrorResponse;
+import com.sinensia.hexagonal.modules.cliente.domain.model.Cliente;
+import com.sinensia.hexagonal.modules.cliente.port.in.ClienteInputPort;
 
 @RestController
 @RequestMapping("/clientes")

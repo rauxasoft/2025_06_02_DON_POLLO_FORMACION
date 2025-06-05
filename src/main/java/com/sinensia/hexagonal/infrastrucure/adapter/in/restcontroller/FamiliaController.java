@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sinensia.hexagonal.application.port.in.FamiliaInputPort;
-import com.sinensia.hexagonal.domain.model.Familia;
+import com.sinensia.hexagonal.modules.familia.domain.model.Familia;
+import com.sinensia.hexagonal.modules.familia.port.in.FamiliaInputPort;
 
 @RestController
 @RequestMapping("/familias")

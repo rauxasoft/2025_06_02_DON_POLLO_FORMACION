@@ -6,9 +6,9 @@ import java.util.Optional;
 import org.dozer.DozerBeanMapper;
 import org.springframework.stereotype.Repository;
 
-import com.sinensia.hexagonal.application.port.out.ProductoOutputPort;
-import com.sinensia.hexagonal.domain.model.Producto;
 import com.sinensia.hexagonal.infrastrucure.adapter.out.jpa.repositories.ProductoPLRepository;
+import com.sinensia.hexagonal.modules.producto.domain.model.Producto;
+import com.sinensia.hexagonal.modules.producto.port.out.ProductoOutputPort;
 
 @Repository
 public class ProductoSpringDataOutputAdapter implements ProductoOutputPort {

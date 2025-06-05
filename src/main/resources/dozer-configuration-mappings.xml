@@ -7,7 +7,7 @@
     <!-- Business to Integration -->
     
     <mapping>
-    	<class-a>com.sinensia.hexagonal.domain.model.Familia</class-a>
+    	<class-a>com.sinensia.hexagonal.modules.familia.domain.model.Familia</class-a>
     	<class-b>com.sinensia.hexagonal.infrastrucure.adapter.out.jpa.entities.FamiliaPL</class-b>
     </mapping>
     

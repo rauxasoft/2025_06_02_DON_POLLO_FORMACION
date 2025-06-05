@@ -6,10 +6,10 @@ import java.util.Optional;
 import org.dozer.DozerBeanMapper;
 import org.springframework.stereotype.Repository;
 
-import com.sinensia.hexagonal.application.port.out.ClienteOutputPort;
-import com.sinensia.hexagonal.domain.model.Cliente;
 import com.sinensia.hexagonal.infrastrucure.adapter.out.jpa.entities.ClientePL;
 import com.sinensia.hexagonal.infrastrucure.adapter.out.jpa.repositories.ClientePLRepository;
+import com.sinensia.hexagonal.modules.cliente.domain.model.Cliente;
+import com.sinensia.hexagonal.modules.cliente.port.out.ClienteOutputPort;
 
 @Repository
 public class ClienteSpringDataOutputAdapter implements ClienteOutputPort{

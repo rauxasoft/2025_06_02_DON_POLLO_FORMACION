@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sinensia.hexagonal.application.port.in.DependienteInputPort;
-import com.sinensia.hexagonal.domain.model.Dependiente;
+import com.sinensia.hexagonal.modules.dependiente.domain.model.Dependiente;
+import com.sinensia.hexagonal.modules.dependiente.port.in.DependienteInputPort;
 
 @RestController
 @RequestMapping("/dependientes")

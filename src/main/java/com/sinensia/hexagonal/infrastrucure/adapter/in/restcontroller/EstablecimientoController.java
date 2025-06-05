@@ -19,9 +19,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.sinensia.hexagonal.application.port.in.EstablecimientoInputPort;
-import com.sinensia.hexagonal.domain.model.Establecimiento;
 import com.sinensia.hexagonal.infrastrucure.adapter.in.restcontroller.config.ErrorResponse;
+import com.sinensia.hexagonal.modules.establecimiento.domain.model.Establecimiento;
+import com.sinensia.hexagonal.modules.establecimiento.port.in.EstablecimientoInputPort;
 
 @RestController
 @RequestMapping("/establecimientos")
@@ -74,7 +74,8 @@ public class EstablecimientoController {
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void update(@RequestBody Establecimiento establecimiento, @PathVariable Long id){
 		
-		establecimiento.setId(id);
+		// TODO
+		
 		establecimientoInputPort.actualizarEstablecimiento(establecimiento);
 
 	}
@@ -89,19 +90,21 @@ public class EstablecimientoController {
 		}
 		
 		Establecimiento establecimiento = optional.get();
+	
+	// TODO	
 		
 		values.forEach((k, v) -> {
 			
 			if("nombre".equals(k)) {
-				establecimiento.setNombre((String) v);
+	//			establecimiento.setNombre((String) v);
 			}
 			
 			if("telefono1".equals(k)) {
-				establecimiento.getDatosContacto().setTelefono1((String) v);
+	//			establecimiento.getDatosContacto().setTelefono1((String) v);
 			}
 			
 			if("telefono2".equals(k)) {
-				establecimiento.getDatosContacto().setTelefono2((String) v);
+	//			establecimiento.getDatosContacto().setTelefono2((String) v);
 			}
 		});
 		

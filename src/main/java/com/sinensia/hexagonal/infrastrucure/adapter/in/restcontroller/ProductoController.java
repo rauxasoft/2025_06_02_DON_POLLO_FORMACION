@@ -20,9 +20,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.sinensia.hexagonal.application.port.in.ProductoInputPort;
-import com.sinensia.hexagonal.domain.model.Producto;
 import com.sinensia.hexagonal.infrastrucure.adapter.in.restcontroller.config.ErrorResponse;
+import com.sinensia.hexagonal.modules.producto.domain.model.Producto;
+import com.sinensia.hexagonal.modules.producto.port.in.ProductoInputPort;
 
 @RestController
 @RequestMapping("/productos")
@@ -88,7 +88,8 @@ public class ProductoController {
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void update(@RequestBody Producto producto, @PathVariable Long id){
 		
-		producto.setId(id);
+		// TODO
+		//producto.setId(id);
 		productoInputPort.actualizarProducto(producto);
 	 
 	}

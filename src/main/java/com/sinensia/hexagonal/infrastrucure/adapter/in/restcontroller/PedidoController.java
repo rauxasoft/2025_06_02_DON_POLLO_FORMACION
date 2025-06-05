@@ -20,9 +20,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.sinensia.hexagonal.application.port.in.PedidoInputPort;
-import com.sinensia.hexagonal.domain.model.Pedido;
 import com.sinensia.hexagonal.infrastrucure.adapter.in.restcontroller.config.ErrorResponse;
+import com.sinensia.hexagonal.modules.pedido.domain.model.Pedido;
+import com.sinensia.hexagonal.modules.pedido.port.in.PedidoInputPort;
 
 @RestController
 @RequestMapping("/pedidos")
@@ -77,7 +77,7 @@ public class PedidoController {
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void update(@PathVariable Long id, @RequestBody Pedido pedido) {
 		
-		pedido.setId(id);
+		// TODO
 		
 		pedidoInputPort.actualizarPedido(pedido);
 		

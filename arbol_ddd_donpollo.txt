@@ -1,0 +1,95 @@
+
+com.sinensia.hexagonal
+└── modules
+    ├── pedido
+    │   ├── domain
+    │   │   ├── model
+    │   │   │   ├── Pedido.java
+    │   │   │   ├── PedidoId.java
+    │   │   │   ├── LineaDetalle.java
+    │   │   │   ├── EstadoPedido.java
+    │   │   │   └── TotalPedido.java (opcional)
+    │   │   └── exception
+    │   │       └── PedidoYaEnviadoException.java
+    │   ├── port
+    │   │   ├── in
+    │   │   │   └── PedidoInputPort.java
+    │   │   └── out
+    │   │       └── PedidoOutputPort.java
+    │   └── usecase
+    │       └── PedidoUseCase.java
+    │
+    ├── producto
+    │   ├── domain
+    │   │   └── model
+    │   │       ├── Producto.java
+    │   │       ├── ProductoId.java
+    │   │       └── FamiliaId.java
+    │   ├── port
+    │   │   ├── in
+    │   │   │   └── ProductoInputPort.java
+    │   │   └── out
+    │   │       └── ProductoOutputPort.java
+    │   └── usecase
+    │       └── ProductoUseCase.java
+    │
+    ├── familia
+    │   ├── domain
+    │   │   └── model
+    │   │       ├── Familia.java
+    │   │       └── FamiliaId.java
+    │   ├── port
+    │   │   ├── in
+    │   │   │   └── FamiliaInputPort.java
+    │   │   └── out
+    │   │       └── FamiliaOutputPort.java
+    │   └── usecase
+    │       └── FamiliaUseCase.java
+    │
+    ├── cliente
+    │   ├── domain
+    │   │   └── model
+    │   │       ├── Cliente.java
+    │   │       └── ClienteId.java
+    │   ├── port
+    │   │   ├── in
+    │   │   │   └── ClienteInputPort.java
+    │   │   └── out
+    │   │       └── ClienteOutputPort.java
+    │   └── usecase
+    │       └── ClienteUseCase.java
+    │
+    ├── dependiente
+    │   ├── domain
+    │   │   └── model
+    │   │       ├── Dependiente.java
+    │   │       └── DependienteId.java
+    │   ├── port
+    │   │   ├── in
+    │   │   │   └── DependienteInputPort.java
+    │   │   └── out
+    │   │       └── DependienteOutputPort.java
+    │   └── usecase
+    │       └── DependienteUseCase.java
+    │
+    └── establecimiento
+        ├── domain
+        │   └── model
+        │       ├── Establecimiento.java
+        │       └── EstablecimientoId.java
+        ├── port
+        │   ├── in
+        │   │   └── EstablecimientoInputPort.java
+        │   └── out
+        │       └── EstablecimientoOutputPort.java
+        └── usecase
+            └── EstablecimientoUseCase.java
+
+shared
+└── domain
+    ├── exception
+    │   └── BusinessException.java
+    └── model
+        ├── DatosContacto.java
+        ├── Direccion.java
+        └── DatosPersonales.java

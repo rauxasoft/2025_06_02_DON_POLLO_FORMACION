@@ -6,10 +6,10 @@ import java.util.Optional;
 import org.dozer.DozerBeanMapper;
 import org.springframework.stereotype.Repository;
 
-import com.sinensia.hexagonal.application.port.out.PedidoOutputPort;
-import com.sinensia.hexagonal.domain.model.Pedido;
 import com.sinensia.hexagonal.infrastrucure.adapter.out.jpa.entities.PedidoPL;
 import com.sinensia.hexagonal.infrastrucure.adapter.out.jpa.repositories.PedidoPLRepository;
+import com.sinensia.hexagonal.modules.pedido.domain.model.Pedido;
+import com.sinensia.hexagonal.modules.pedido.port.out.PedidoOutputPort;
 
 @Repository
 public class PedidoSpringDataOutputAdapter implements PedidoOutputPort {
