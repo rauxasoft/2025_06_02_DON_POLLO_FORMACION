@@ -75,11 +75,15 @@ public class Pedido {
 		this.lineas.add(linea);
 	}
 	
-	public void marcarComoEnviado() {
+	public void entregar() {
 		if (estado != EstadoPedido.PENDIENTE_ENTREGA) {
 			throw new BusinessException("Solo se puede enviar un pedido pendiente.");
 		}
-		this.estado = EstadoPedido.CANCELADO;
+		this.estado = EstadoPedido.ENTREGADO;
+	}
+	
+	public void procesar() {
+		
 	}
 
 	public void cancelar() {

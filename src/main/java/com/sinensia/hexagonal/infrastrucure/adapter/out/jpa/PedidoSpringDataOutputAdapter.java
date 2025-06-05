@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.sinensia.hexagonal.infrastrucure.adapter.out.jpa.entities.PedidoPL;
 import com.sinensia.hexagonal.infrastrucure.adapter.out.jpa.repositories.PedidoPLRepository;
 import com.sinensia.hexagonal.modules.pedido.domain.model.Pedido;
+import com.sinensia.hexagonal.modules.pedido.domain.model.PedidoId;
 import com.sinensia.hexagonal.modules.pedido.port.out.PedidoOutputPort;
 
 @Repository
@@ -23,9 +24,11 @@ public class PedidoSpringDataOutputAdapter implements PedidoOutputPort {
 	}
 	
 	@Override
-	public Optional<Pedido> obtenerPedidoPorId(Long idPedido) {
+	public Optional<Pedido> obtenerPedidoPorId(PedidoId pedidoId) {
 		
-		return pedidoPLRepository.findById(idPedido).stream()
+		Long id = pedidoId.getValue();
+		
+		return pedidoPLRepository.findById(id).stream()
 				.map(x -> mapper.map(x, Pedido.class))
 				.findAny();
 	}
@@ -44,8 +47,8 @@ public class PedidoSpringDataOutputAdapter implements PedidoOutputPort {
 	}
 
 	@Override
-	public boolean existePedidoPorId(Long idPedido) {
-		return pedidoPLRepository.existsById(idPedido);
+	public boolean existePedidoPorId(PedidoId pedidoId) {
+		return pedidoPLRepository.existsById(pedidoId.getValue());
 	}
 
 	@Override

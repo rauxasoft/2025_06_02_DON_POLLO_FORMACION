@@ -22,6 +22,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import com.sinensia.hexagonal.infrastrucure.adapter.in.restcontroller.config.ErrorResponse;
 import com.sinensia.hexagonal.modules.pedido.domain.model.Pedido;
+import com.sinensia.hexagonal.modules.pedido.domain.model.PedidoId;
 import com.sinensia.hexagonal.modules.pedido.port.in.PedidoInputPort;
 
 @RestController
@@ -55,7 +56,7 @@ public class PedidoController {
 	@GetMapping("/{id}")
 	public ResponseEntity<?> getPedidoById(@PathVariable Long id){
 		
-		Optional<Pedido> optional = pedidoInputPort.obtenerPedidoPorId(id);
+		Optional<Pedido> optional = pedidoInputPort.obtenerPedidoPorId(new PedidoId(id));
 		
 		if(optional.isEmpty()) {
 			return new ResponseEntity<>(new ErrorResponse("No existe el pedido " + id), HttpStatus.NOT_FOUND);

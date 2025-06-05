@@ -8,6 +8,7 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 import com.sinensia.hexagonal.modules.pedido.domain.model.Pedido;
+import com.sinensia.hexagonal.modules.pedido.domain.model.PedidoId;
 import com.sinensia.hexagonal.modules.pedido.port.in.PedidoInputPort;
 import com.sinensia.hexagonal.modules.pedido.port.out.PedidoOutputPort;
 
@@ -27,7 +28,7 @@ public class PedidoUseCases implements PedidoInputPort {
 	}
 
 	@Override
-	public Optional<Pedido> obtenerPedidoPorId(Long idPedido) {
+	public Optional<Pedido> obtenerPedidoPorId(PedidoId idPedido) {
 		return pedidoOutputPort.obtenerPedidoPorId(idPedido);
 	}
 

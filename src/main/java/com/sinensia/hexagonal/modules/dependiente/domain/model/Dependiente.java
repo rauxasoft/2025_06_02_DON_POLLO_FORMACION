@@ -8,7 +8,6 @@ public class Dependiente {
 
     private final DependienteId id;
     private DatosPersonales datosPersonales;
-    private DatosContacto datosContacto;
     private String manipuladorAlimentos; // formato tipo "RS-0090223"
 
     public Dependiente(DependienteId id, DatosPersonales datosPersonales, DatosContacto datosContacto, String manipuladorAlimentos) {
@@ -31,7 +30,6 @@ public class Dependiente {
 
         this.id = id;
         this.datosPersonales = datosPersonales;
-        this.datosContacto = datosContacto;
         this.manipuladorAlimentos = manipuladorAlimentos;
     }
 
@@ -41,10 +39,6 @@ public class Dependiente {
 
     public DatosPersonales getDatosPersonales() {
         return datosPersonales;
-    }
-
-    public DatosContacto getDatosContacto() {
-        return datosContacto;
     }
 
     public String getManipuladorAlimentos() {
@@ -66,7 +60,6 @@ public class Dependiente {
         }
 
         this.datosPersonales = nuevosDatos;
-        this.datosContacto = nuevoContacto;
         this.manipuladorAlimentos = nuevoCarnet;
     }
 
@@ -75,7 +68,6 @@ public class Dependiente {
         return "Dependiente{" +
                 "id=" + id +
                 ", datosPersonales=" + datosPersonales +
-                ", datosContacto=" + datosContacto +
                 ", manipuladorAlimentos='" + manipuladorAlimentos + '\'' +
                 '}';
     }

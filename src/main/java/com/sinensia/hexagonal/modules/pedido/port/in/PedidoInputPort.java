@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Optional;
 
 import com.sinensia.hexagonal.modules.pedido.domain.model.Pedido;
+import com.sinensia.hexagonal.modules.pedido.domain.model.PedidoId;
 
 public interface PedidoInputPort {
 
@@ -15,7 +16,7 @@ public interface PedidoInputPort {
 	 */
 	Long crearPedido(Pedido pedido);										
 	
-	Optional<Pedido> obtenerPedidoPorId(Long idPedido);							
+	Optional<Pedido> obtenerPedidoPorId(PedidoId idPedido);							
 	
 	/**
 	 * Si la id es null o no existe lanza BusinessException
