@@ -2,6 +2,8 @@ package com.sinensia.hexagonal.modules.familia.domain.model;
 
 import java.util.Objects;
 
+import com.sinensia.hexagonal.shared.domain.exception.BusinessException;
+
 public class FamiliaId {
 
     private final Long value;
@@ -9,7 +11,7 @@ public class FamiliaId {
     public FamiliaId(Long value) {
     	
         if (value == null) {
-            throw new IllegalArgumentException("El id de familia no puede ser nulo");
+            throw new BusinessException("El id de familia no puede ser nulo");
         }
         
         this.value = value;
